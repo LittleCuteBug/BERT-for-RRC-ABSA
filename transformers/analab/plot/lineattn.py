@@ -13,7 +13,7 @@ import shutil
 import matplotlib
 import random
 
-from torch.optim.optimizer import Optimizer, required
+from torch.optim.optimizer import Optimizer
 from torch.distributions import Categorical
 
 from matplotlib import pyplot as plt
@@ -40,7 +40,9 @@ class LineAttn(object):
                 x_points = [.1, .9]
                 y_points = [1. - float(left_idx) * word_height, 1. - float(right_idx) * word_height]
                 plt.plot(x_points, y_points, color=self.color, linewidth=1, alpha=1.)
+
         plt.savefig("line_attn.png")
+        print("save_fig line_attn.png\n")
 
 
 class TestPlot(object):
@@ -51,7 +53,6 @@ class TestPlot(object):
         plot = LineAttn(plt)
         
         plot(words)
-        assert False
 
 
 if __name__ == '__main__':

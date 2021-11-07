@@ -26,3 +26,5 @@ class NeuronPlot(Plot):
         plt.plot(range(len(log_reg.coef_[0])), log_reg.coef_.T)
         plt.xlabel('Neuron Index', size=20)
         plt.ylabel('Neuron Weight', size=20)
+        plt.savefig(self.fn)
+        print("savefig " + self.fn)

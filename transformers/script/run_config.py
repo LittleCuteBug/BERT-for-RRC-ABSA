@@ -6,11 +6,11 @@ from reviewlab import TaskConfig, TrainConfig, BaselineConfig
 trainconfig = TrainConfig()
 
 taskconfigs = [
-    TaskConfig("ae", "14", "laptop"),
+    # TaskConfig("ae", "14", "laptop"),
     TaskConfig("asc", "14", "laptop"),
     TaskConfig("e2e", "14", "laptop"),
     
-    TaskConfig("ae", "16", "rest"),
+    # TaskConfig("ae", "16", "rest"),
     TaskConfig("asc", "14", "rest"),
     TaskConfig("e2e", "union", "rest"),
 ]

@@ -9,7 +9,6 @@ import random
 
 from collections import defaultdict
 from sklearn.manifold import TSNE
-from torch.optim.optimizer import Optimizer, required
 from torch.distributions import Categorical
 
 from matplotlib import pyplot as plt
@@ -41,6 +40,9 @@ class TSNEPlot(Plot):
 
         plt.xlim(x_coords.min()+0.00005, x_coords.max()+0.00005)
         plt.ylim(y_coords.min()+0.00005, y_coords.max()+0.00005)
+        plt.savefig(self.fn)
+
+        print("savefig " + self.fn)
 
 
 class TypedTSNEPlot(Plot):
@@ -74,3 +76,6 @@ class TypedTSNEPlot(Plot):
         plt.xlim(x_coords.min()-0.00005, x_coords.max()+0.00005)
         plt.ylim(y_coords.min()-0.00005, y_coords.max()+0.00005)
         plt.legend()
+        plt.savefig(self.fn)
+
+        print("savefig " + self.fn)

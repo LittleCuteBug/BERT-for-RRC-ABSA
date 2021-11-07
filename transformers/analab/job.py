@@ -5,7 +5,7 @@ from collections import defaultdict
 from reviewlab import absa_data_util
 
 from .modelutil import ModelUtil
-from .plot import LineAttnPlot, AspectLineAttnPlot, TSNEPlot, TypedTSNEPlot
+from .plot import LineAttn, TSNEPlot, TypedTSNEPlot
 
 logger = logging.getLogger(__name__)
 
@@ -130,7 +130,7 @@ class LatentANAJob(Job):
         os.makedirs(path, exist_ok=True)
         fn = os.path.join(path, f"LatentANA.png")
         plot = TypedTSNEPlot(fn)
-        plot(embeddings, phrases, labels, ["aspect", "non-aspect"], {"aspect": "c", "non-aspect": "m"}, False)
+        plot.plot(embeddings, phrases, labels, ["aspect", "non-aspect"], {"aspect": "c", "non-aspect": "m"}, False)
 
 
 class MultiDomainAspectJob(LatentAspectJob):
@@ -156,7 +156,7 @@ class MultiDomainAspectJob(LatentAspectJob):
         os.makedirs(path, exist_ok=True)
         fn = os.path.join(path, f"LatentAspect.png")
         plot = TypedTSNEPlot(fn)
-        plot(
+        plot.plot(
             t_embeddings, t_phrases, t_labels,
             ["POS", "NEG", "NEU"],
             {"POS": "g", "NEG": "r", "NEU": "b"},
@@ -186,7 +186,7 @@ class DomainAspectJob(LatentAspectJob):
         os.makedirs(path, exist_ok=True)
         fn = os.path.join(path, f"dvd.png")
         plot = TypedTSNEPlot(fn)
-        plot(
+        plot.plot(
             t_embeddings, t_phrases, t_labels,
             ["laptop", "rest"],
             {"laptop": "g", "rest": "r"},
@@ -218,7 +218,7 @@ class LatentOTJob(LatentAspectJob):
         os.makedirs(path, exist_ok=True)
         fn = os.path.join(path, f"LatentOT.png")
         plot = TypedTSNEPlot(fn)
-        plot(embeddings[:-30], phrases[:-30], labels[:-30], ["POS", "NEG"], {"POS": "g", "NEG": "r"})
+        plot.plot(embeddings[:-30], phrases[:-30], labels[:-30], ["POS", "NEG"], {"POS": "g", "NEG": "r"})
 
 
 from sklearn.linear_model import LogisticRegression
@@ -282,7 +282,7 @@ class SentiDiscoveryJob(LatentAspectJob):
         fn = os.path.join(path, f"SentiDiscovery.png")
 
         plot = NeuronPlot(fn)
-        plot(log_reg)
+        plot.plot(log_reg)
 
 import numpy as np
 
@@ -358,4 +358,4 @@ class AspectDiscoveryJob(LatentANAJob):
         fn = os.path.join(path, f"AspectDiscovery.png")
 
         plot = NeuronPlot(fn)
-        plot(log_reg)
+        plot.plot(log_reg)

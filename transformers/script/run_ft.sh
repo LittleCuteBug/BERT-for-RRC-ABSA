@@ -1,7 +1,8 @@
 #!/bin/bash
 
-rm configs/*.json
-python script/run_config.py
+#rm configs/*.json
+export PYTHONPATH="${PYTHONPATH}:./"
+#python script/run_config.py
 
 # specify GPU ids you want to use.
 GPUS=('0')

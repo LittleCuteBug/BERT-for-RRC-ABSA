@@ -48,13 +48,42 @@ a = {
         "job": AspectDiscoveryJob,
         "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
     },
-}
-
-JOB_CLS = {
     "SentiDiscovery": {
         "job": SentiDiscoveryJob,
         "config": TaskConfig("e2e", "14", "laptop"),
     },
+}
+
+JOB_CLS = {
+    "Attention": {
+        "job": AttentionJob,
+        "config": TaskConfig("e2e", "14", "laptop")
+    },
+    # "LatentANA": {
+    #     "job": LatentANAJob,
+    #     "config": TaskConfig("e2e", "14", "laptop")
+    # },
+    # "MultiDomainAspect": {
+    #     "job": MultiDomainAspectJob,
+    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    # },
+    # "DomainAspect": {
+    #     "job": DomainAspectJob,
+    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    # },
+    # # "LatentOT": {
+    # #     "job": LatentOTJob,
+    # #     "config": TaskConfig("e2e", "14", "laptop"),
+    # # },
+    # "AspectDiscovery": {
+    #     "job": AspectDiscoveryJob,
+    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    # },
+    # "SentiDiscovery": {
+    #     "job": SentiDiscoveryJob,
+    #     "config": TaskConfig("e2e", "14", "laptop"),
+    # },
+
 }
 
 

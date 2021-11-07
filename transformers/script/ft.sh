@@ -7,7 +7,7 @@ GPU=$2
 RUNS=$3
 
 . ~/anaconda3/etc/profile.d/conda.sh
-conda activate p3-torch13
+conda activate BERT
 
 export CUDA_VISIBLE_DEVICES=${GPU}
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-GPU=0
+GPU=1
 
 . ~/anaconda3/etc/profile.d/conda.sh
-conda activate p3-torch13
+conda activate BERT
 
 export CUDA_VISIBLE_DEVICES=${GPU}
 
