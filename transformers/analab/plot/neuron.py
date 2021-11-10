@@ -28,3 +28,4 @@ class NeuronPlot(Plot):
         plt.ylabel('Neuron Weight', size=20)
         plt.savefig(self.fn)
         print("savefig " + self.fn)
+        plt.clf();

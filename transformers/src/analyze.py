@@ -55,42 +55,45 @@ a = {
 }
 
 JOB_CLS = {
-    "Attention": {
-        "job": AttentionJob,
-        "config": TaskConfig("e2e", "14", "laptop")
-    },
-    # "LatentANA": {
-    #     "job": LatentANAJob,
+    # "Attention": {
+    #     "job": AttentionJob,
     #     "config": TaskConfig("e2e", "14", "laptop")
     # },
-    # "MultiDomainAspect": {
-    #     "job": MultiDomainAspectJob,
-    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
-    # },
-    # "DomainAspect": {
-    #     "job": DomainAspectJob,
-    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
-    # },
+    "LatentANA": {
+        "job": LatentANAJob,
+        "config": TaskConfig("e2e", "14", "laptop")
+    },
+    "MultiDomainAspect": {
+        "job": MultiDomainAspectJob,
+        "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    },
+    "DomainAspect": {
+        "job": DomainAspectJob,
+        "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    },
     # # "LatentOT": {
     # #     "job": LatentOTJob,
     # #     "config": TaskConfig("e2e", "14", "laptop"),
     # # },
-    # "AspectDiscovery": {
-    #     "job": AspectDiscoveryJob,
-    #     "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
-    # },
-    # "SentiDiscovery": {
-    #     "job": SentiDiscoveryJob,
-    #     "config": TaskConfig("e2e", "14", "laptop"),
-    # },
+    "AspectDiscovery": {
+        "job": AspectDiscoveryJob,
+        "config": [TaskConfig("e2e", "14", "laptop"), TaskConfig("e2e", "union", "rest")]
+    },
+    "SentiDiscovery": {
+        "job": SentiDiscoveryJob,
+        "config": TaskConfig("e2e", "14", "laptop"),
+    },
 
 }
 
 
 MODELS = [
-    # "bert-base-uncased",
-    # "activebus/BERT-PT_DOMAIN",
-    # "activebus/BERT_Review",
+    "bert-base-uncased",
+    "activebus/BERT-DK_laptop",
+    "activebus/BERT-PT_laptop",
+    "activebus/BERT-DK_rest",
+    "activebus/BERT-PT_rest",
+    "activebus/BERT_Review",
     "activebus/BERT-XD_Review",
 ]
 

@@ -43,6 +43,7 @@ class LineAttn(object):
 
         plt.savefig("line_attn.png")
         print("save_fig line_attn.png\n")
+        plt.clf();
 
 
 class TestPlot(object):

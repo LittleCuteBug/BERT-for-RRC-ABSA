@@ -43,6 +43,7 @@ class TSNEPlot(Plot):
         plt.savefig(self.fn)
 
         print("savefig " + self.fn)
+        plt.clf();
 
 
 class TypedTSNEPlot(Plot):
@@ -79,3 +80,4 @@ class TypedTSNEPlot(Plot):
         plt.savefig(self.fn)
 
         print("savefig " + self.fn)
+        plt.clf();
